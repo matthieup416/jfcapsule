@@ -27,7 +27,7 @@ router.post('/upload', async function (req, res, next) {
     res.json({ error: resultCopy })
   }
 
-  fs.unlinkSync(pictureName)
+  // fs.unlinkSync(pictureName)
 })
 
 module.exports = router
