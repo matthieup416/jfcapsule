@@ -21,6 +21,7 @@ router.post('/upload', async function (req, res, next) {
   console.log('resultCopy : ', resultCopy)
   if (!resultCopy) {
     var resultCloudinary = await cloudinary.uploader.upload(pictureName)
+    console.log('resultCloudinary :  ', resultCloudinary)
     res.json(resultCloudinary)
   } else {
     res.json({ error: resultCopy })
